@@ -1,0 +1,60 @@
+name: Deploy sitio web a AWS Learner Lab
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Desplegar en EC2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Descargar código del repositorio
+        uses: actions/checkout@v4
+
+      - name: 2. Preparar clave SSH
+        shell: bash
+        env:
+          AWS_SSH_KEY: ${{ secrets.AWS_SSH_KEY }}
+          AWS_HOST: ${{ secrets.AWS_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$AWS_SSH_KEY" | tr -d '\r' > ~/.ssh/labsuser.pem
+          chmod 600 ~/.ssh/labsuser.pem
+          ssh-keyscan -H "$AWS_HOST" >> ~/.ssh/known_hosts
+
+      - name: 3. Copiar archivos al servidor
+        shell: bash
+        env:
+          AWS_HOST: ${{ secrets.AWS_HOST }}
+          AWS_USER: ${{ secrets.AWS_USER }}
+        run: |
+          ssh -i ~/.ssh/labsuser.pem "$AWS_USER@$AWS_HOST" "rm -rf /tmp/cloudflow-site && mkdir -p /tmp/cloudflow-site"
+          scp -i ~/.ssh/labsuser.pem -r . "$AWS_USER@$AWS_HOST:/tmp/cloudflow-site/"
+          ssh -i ~/.ssh/labsuser.pem "$AWS_USER@$AWS_HOST" "rm -rf /tmp/cloudflow-site/.git /tmp/cloudflow-site/.github"
+
+      - name: 4. Publicar en Apache
+        shell: bash
+        env:
+          AWS_HOST: ${{ secrets.AWS_HOST }}
+          AWS_USER: ${{ secrets.AWS_USER }}
+        run: |
+          ssh -i ~/.ssh/labsuser.pem "$AWS_USER@$AWS_HOST" '
+            sudo rm -rf /var/www/html/* &&
+            sudo cp -r /tmp/cloudflow-site/* /var/www/html/ &&
+            sudo chown -R apache:apache /var/www/html &&
+            sudo systemctl restart httpd
+          '

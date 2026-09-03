@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RadioGuía: orientación general para prepararte antes de un examen de imágenes.">
+    <title>RadioGuía | Preparación para exámenes de imágenes</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    
+    
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navegación principal">
+            <a class="brand" href="#inicio" aria-label="RadioGuía, ir al inicio">
+                <span class="brand-mark" aria-hidden="true">R</span>
+                <span>RadioGuía</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#examenes">Exámenes</a>
+                <a href="#preparacion">Preparación</a>
+                <a href="#preguntas">Preguntas frecuentes</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-content">
+                <div class="hero-copy" style="color: black;">
+                    <p class="eyebrow">Orientación para pacientes</p>
+
+                    <h1>Prepárate con claridad para tu examen de imágenes.</h1>
+
+                    <p class="hero-description" style="color: black;">
+                        Encuentra información general para conocer los tipos de exámenes,
+                        revisar aspectos de preparación y resolver preguntas frecuentes.
+                    </p>
+
+                    <div class="hero-actions" style="color: black;">
+                        <a class="btn btn-primary" href="#examenes">
+                            Explorar exámenes
+                        </a>
+                        <a class="btn btn-secondary" href="#preparacion">
+                            Ver preparación
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-card" style="color: black;">
+                    <img class="hero-banner" src="img/1.jpeg" alt="Antes de tu examen">
+                    <div class="hero-card-caption" style="color: black;">
+                        <span class="hero-card-icon" style="color: black;">+</span>
+                        <p style="color: black;">Información clara</p>
+                        <strong style="color: black;">Antes de tu examen</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="notice-section">
+            <div class="container">
+                <div class="notice-card">
+                    <span class="notice-icon" aria-hidden="true">i</span>
+                    <p>
+                        Esta plataforma entrega información orientativa. Confirma siempre
+                        la preparación y las indicaciones con tu centro médico y equipo de salud.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="examenes">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Tipos de estudio</p>
+                    <h2>Conoce tu examen</h2>
+                    <p>
+                        Selecciona un tipo de examen para revisar información general de preparación.
+                    </p>
+                </div>
+
+                <div class="exam-grid">
+                    <article class="exam-card">
+                        <div class="exam-icon" aria-hidden="true">🩻</div>
+                        <h3>Radiografía</h3>
+                        <p>Imágenes obtenidas mediante rayos X para evaluar distintas zonas del cuerpo.</p>
+                        <button class="text-button" type="button" data-exam="radiografia">Ver orientación <span>→</span></button>
+                    </article>
+
+                    <article class="exam-card">
+                        <div class="exam-icon" aria-hidden="true">◉</div>
+                        <h3>Tomografía</h3>
+                        <p>Estudio que obtiene imágenes detalladas mediante equipos especializados.</p>
+                        <button class="text-button" type="button" data-exam="tomografia">Ver orientación <span>→</span></button>
+                    </article>
+
+                    <article class="exam-card">
+                        <div class="exam-icon" aria-hidden="true">◎</div>
+                        <h3>Resonancia magnética</h3>
+                        <p>Examen que utiliza campos magnéticos y radiofrecuencia para generar imágenes.</p>
+                        <button class="text-button" type="button" data-exam="resonancia">Ver orientación <span>→</span></button>
+                    </article>
+
+                    <article class="exam-card">
+                        <div class="exam-icon" aria-hidden="true">≋</div>
+                        <h3>Ecografía</h3>
+                        <p>Estudio de imágenes que utiliza ondas de ultrasonido.</p>
+                        <button class="text-button" type="button" data-exam="ecografia">Ver orientación <span>→</span></button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section preparation-section" id="preparacion">
+            <div class="container preparation-layout">
+                <div>
+                    <p class="eyebrow">Antes de asistir</p>
+                    <h2>Pasos generales de preparación</h2>
+                    <p>
+                        Las indicaciones pueden variar según el tipo de estudio, la zona a evaluar
+                        y el protocolo del centro. Revisa siempre la información específica de tu cita.
+                    </p>
+                </div>
+
+                <ol class="steps-list">
+                    <li>
+                        <span class="step-number">01</span>
+                        <div>
+                            <h3>Revisa tus indicaciones</h3>
+                            <p>Confirma la hora, lugar y preparación entregada por el centro.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="step-number">02</span>
+                        <div>
+                            <h3>Prepara tus documentos</h3>
+                            <p>Lleva la orden médica y exámenes previos si te fueron solicitados.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span class="step-number">03</span>
+                        <div>
+                            <h3>Informa al equipo de salud</h3>
+                            <p>Comunica antecedentes relevantes o dudas antes de realizar el examen.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section" id="preguntas">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Resuelve tus dudas</p>
+                    <h2>Preguntas frecuentes</h2>
+                </div>
+
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            ¿Debo llegar antes de mi hora de atención?
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Confirma la hora de presentación directamente con el centro donde realizarás tu examen.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            ¿Qué documentos debo llevar?
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Generalmente se solicita identificación, orden médica y, cuando corresponda, exámenes
+                                previos.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button class="faq-question" type="button">
+                            ¿Qué hago si tengo dudas sobre la preparación?
+                            <span aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Contacta al centro de imágenes o consulta al equipo de salud que indicó el examen.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <a class="brand" href="#inicio">
+                    <span class="brand-mark" aria-hidden="true">R</span>
+                    <span>RadioGuía</span>
+                </a>
+                <p>Proyecto educativo de orientación general para exámenes de imágenes.</p>
+            </div>
+
+            <p>© 2026 RadioGuía · No almacena datos personales ni clínicos.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="orientacion-modal" aria-hidden="true">
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" id="modal-close" aria-label="Cerrar">×</button>
+
+            <div class="modal-header">
+                <span class="modal-icon" id="modal-icon" aria-hidden="true">🩻</span>
+                <div class="modal-title">
+                    <small>Orientación general</small>
+                    <h3 id="modal-title">Radiografía</h3>
+                </div>
+            </div>
+
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

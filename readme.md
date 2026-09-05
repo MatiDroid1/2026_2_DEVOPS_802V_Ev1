@@ -37,7 +37,7 @@ Matias: Fue un trabajo interesante, desde el armado del frontend hasta su despli
 lo que era desplegar una página, eso si lo que me complicó un poco era adaptar el deploy.yml donde tuve que guiarme con el ejemplo del profesor para acordarme
 y estructurarlo para este trabajo.
 
-Keiton: 
+Keiton: Me sirvió para reforzar conocimientos de como era un despliegue en aws, a su vez repasar un poco de desarrollo web en donde maquetamos la vista y hacerlo responsive
 
 
 # Fotorgrafia de evidencia

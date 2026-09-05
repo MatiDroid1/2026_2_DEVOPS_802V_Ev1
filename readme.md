@@ -30,3 +30,16 @@ Las decisiones de arquitectura, la elección de GitFlow, y el desarrollo del có
 
 # Licencia
 Este proyecto se distribuye bajo licencia MIT con fines solamente educativos. Consulte el archivo LICENSE para más información.
+
+# Reflexiones individuales
+
+Matias: Fue un trabajo interesante, desde el armado del frontend hasta su despliegue, me sirvió para repasar conocimientos previos que teniamos anteriormente con
+lo que era desplegar una página, eso si lo que me complicó un poco era adaptar el deploy.yml donde tuve que guiarme con el ejemplo del profesor para acordarme
+y estructurarlo para este trabajo.
+
+Keiton: 
+
+
+# Fotorgrafia de evidencia
+Foto que evidencia que la web se muestra sobre una ip pública de la ec2
+![alt text](image.png)

@@ -1,9 +1,10 @@
-name: Deploy sitio web a AWS Learner Lab
+name: Deploy sitio preparacion para examenes de radiologia a AWS Learner Lab
 
 on:
   push:
     branches:
       - main
+      - develop
 
   pull_request:
     branches:

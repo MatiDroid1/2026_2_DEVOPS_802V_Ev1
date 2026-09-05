@@ -182,7 +182,7 @@ body {
     background:
         linear-gradient(125deg, rgba(10, 31, 61, 0.96), rgba(18, 84, 153, 0.92)),
         var(--primary-900);
-    /* color: white; */
+    color: white;
     min-height: 660px;
     overflow: hidden;
     position: relative;
@@ -208,7 +208,6 @@ body {
 
 .hero-copy {
     padding-block: 96px;
-    color:black;
 }
 
 .hero h1 {
@@ -226,7 +225,7 @@ body {
 }
 
 .hero-description {
-    color: rgba(0, 0, 0, 0.82);
+    color: rgba(255, 255, 255, 0.82);
     font-size: 1.1rem;
     max-width: 570px;
 }
@@ -236,7 +235,6 @@ body {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 34px;
-    color: black;
 }
 
 /* Hero card banner */
